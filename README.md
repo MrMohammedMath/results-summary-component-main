@@ -40,8 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/MrMohammedMath/results-summary-component-main.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-<!-- TODO: add live URL -->
+- Live Site URL: [results-summary-component-main-mh.netlify.app](https://results-summary-component-main-mh.netlify.app/)
 ## My process
 
 ### Built with
