@@ -1,0 +1,172 @@
+@import 'config';
+
+.result {
+    $margin-rl: 30px;
+
+    display: flex;
+    flex-direction: column;
+    font-family: 'Hanken Grotesk', sans-serif;
+
+    @include screen-md {
+        flex-direction: row;
+        justify-content: center;
+        border-radius: 25px;
+        box-shadow: 5px 5px 15px 5px rgb(0 0 255 / 0.09);
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        background-image: linear-gradient(rgb(95 63 252), rgb(49 44 234));
+        border-radius: 0 0 30px 30px;
+
+        @include screen-md {
+            border-radius: 25px;
+            width: 26vw;
+        }
+
+        &__title {
+            color: rgb(255 255 255 / .5);
+            font-size: 1.1rem;
+            margin: 25px;
+        }
+
+        &__total {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            $radius: 140px;
+            border-radius: calc($radius / 2);
+            width: $radius;
+            height: $radius;
+
+            background-image: linear-gradient(rgb(76 33 200 / 1), rgb(71 52 240 / .2));
+            // margin: 20px 0;
+
+            &__value {
+                color: rgb(255 255 255);
+                font-size: 3.5rem;
+                font-weight: 800;
+            }
+
+            &__fullmark {
+                color: rgb(255 255 255 / .4);
+            }
+        }
+
+        &__great {
+            color: rgb(255 255 255);
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 8px;
+
+        }
+
+        &__paragraph {
+            color: rgb(255 255 255 / .7);
+            margin-bottom: 20px;
+            width: 80%;
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 1rem;
+        }
+
+    }
+
+    &__summary {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+
+        @include screen-md {
+            width: 30vw;
+        }
+
+        &__title {
+            color: hsl(224, 30%, 27%);
+            align-self: flex-start;
+            margin: 20px $margin-rl;
+            font-weight: 700;
+        }
+
+        &__card {
+            display: flex;
+            align-self: stretch;
+            margin: 15px $margin-rl;
+            padding: 16px 15px;
+            border-radius: 10px;
+            font-weight: 700;
+
+            @include screen-md {
+                padding: 11px;
+            }
+
+            &__icon {
+                margin-right: 10px;
+            }
+
+            &__score {
+                margin-left: auto;
+                color: rgb(48 59 90 / .5);
+
+
+                &__value {
+                    font-weight: 800;
+                    color: hsl(224, 30%, 27%);
+                }
+            }
+
+            &:nth-of-type(1n) {
+                margin-top: 0;
+                background-color: rgb(255 87 87 / .1);
+                color: rgb(255 87 87 / 1);
+            }
+
+            &:nth-of-type(2n) {
+                background-color: rgb(255 176 31 / .1);
+                color: rgb(255 176 31 / 1);
+            }
+
+            &:nth-of-type(3n) {
+                background-color: rgb(0 189 145 / .1);
+                color: rgb(0 189 145 / 1);
+            }
+
+            &:nth-of-type(4n) {
+                background-color: rgb(17 37 212 / .1);
+                color: rgb(17 37 212 / 1);
+
+                @include screen-md {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &__btn {
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            background-color: rgb(48 59 89);
+            color: #fff;
+            align-self: stretch;
+            margin: 0 $margin-rl;
+            padding: 15px;
+            font-size: 1rem;
+            transition: background-color 0.5s;
+
+            @include screen-md {
+                padding: 12px;
+                margin-bottom: 30px;
+            }
+
+            &:hover {
+                background-color: rgb(76 55 244);
+                cursor: pointer;
+            }
+        }
+    }
+
+}
